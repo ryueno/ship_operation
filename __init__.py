@@ -34,6 +34,12 @@ def login():
             return redirect(url_for('secret'))
     return render_template('login.html', error=error)
 
+@app.toute('/market')
+def market():
+    return render_template('market.html')
+
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0')
