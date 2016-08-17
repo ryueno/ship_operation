@@ -34,7 +34,7 @@ def login():
             return redirect(url_for('secret'))
     return render_template('login.html', error=error)
 
-@app.toute('/market')
+@app.route('/market')
 def market():
     return render_template('market.html')
 
