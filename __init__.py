@@ -1,6 +1,12 @@
-import os
-import sys
+# coding: utf-8
+# import common modules #
+import sys, os
 from flask import Flask, request, redirect, render_template, url_for
+import numpy as np
+
+# import my modules #
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/calc/market')
+import crude_oil
 
 project_name = 'Ship Operation Simulation'
 error_message = 'invalid error, try again'
@@ -15,11 +21,13 @@ app.config.update(dict(
 ))
 app.config.from_envvar('SHIP_OPERATION_SETTINGS', silent=True)
 
+# index
 @app.route('/')
 def index():
     title = project_name
     return render_template('index.html', title=title)
 
+# Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
@@ -34,12 +42,22 @@ def login():
             return redirect(url_for('secret'))
     return render_template('login.html', error=error)
 
+#### Ship Performance ####
+@app.route('/performance')
+def ship_performance():
+    return render_template('ship_model')
+
+##### Market #####
 @app.route('/market')
 def market():
-    return render_template('market.html')
+    HistoryExcel = ''
+    history_date, history_data = crude_oil.history_data(HistoryExcel)
+    return render_template('market.html', result=zip(history_date, history_data))
+
+##### Route #####
 
 
-
+# main
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0')
