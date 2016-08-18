@@ -6,7 +6,7 @@ import numpy as np
 
 # import my modules #
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/calc/market')
-import crude_oil
+import fuel_price
 
 project_name = 'Ship Operation Simulation'
 error_message = 'invalid error, try again'
@@ -51,8 +51,8 @@ def ship_performance():
 @app.route('/market')
 def market():
     HistoryExcel = ''
-    history_date, history_data = crude_oil.history_data(HistoryExcel)
-    return render_template('market.html', result=zip(history_date, history_data))
+    date, dataCO, dataNG  = fuel_price.history_data(HistoryExcel)
+    return render_template('market.html', result=zip(date, dataCO, dataNG))
 
 ##### Route #####
 

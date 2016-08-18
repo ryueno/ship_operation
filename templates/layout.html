@@ -230,22 +230,42 @@
     google.charts.load('current', {'packages':['line']});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Day');
-        data.addColumn('number', 'Crude Oil Price');
-        data.addRows([
-            {% for date, data in result: %}
-                [{{ date }}, {{ data }}],
+        var dataCO = new google.visualization.DataTable();
+        var dataNG = new google.visualization.DataTable();
+        dataCO.addColumn('date', 'Year');
+        dataCO.addColumn('number', 'Crude Oil (BRE)');
+        dataCO.addColumn('number', 'Crude Oil (DUB)');
+        dataCO.addColumn('number', 'Crude Oil (WTI)');
+        dataNG.addColumn('date', 'Year');
+        dataNG.addColumn('number', 'Natural Gas (EU)');
+        dataNG.addColumn('number', 'Natural Gas (JP)');
+        dataNG.addColumn('number', 'Natural Gas (US)');
+        dataCO.addRows([
+            {% for date, dataCO, dataNG in result: %}
+            [new Date({{ date[0] }}, {{ date[1] }}, 1), {{ dataCO[0] }}, {{ dataCO[1] }}, {{ dataCO[2] }}],
             {% endfor %}
         ]);
-        var options = {
+        dataNG.addRows([
+            {% for date, dataCO, dataNG in result: %}
+            [new Date({{ date[0] }}, {{ date[1] }}, 1), {{ dataNG[0] }}, {{ dataNG[1] }}, {{ dataNG[2] }}],
+            {% endfor %}
+        ]);
+        var optionsCO = {
             chart: {
                 title: 'Crude Oil Price',
                 subtitle: ''
             },
         };
-        var chart = new google.charts.Line(document.getElementById('linechart_material'));
-        chart.draw(data, options);
+        var optionsNG = {
+            chart: {
+                title: 'Natural Gas Price',
+                subtitle: ''
+            },
+        };
+        var chartCO = new google.charts.Line(document.getElementById('CO_chart'));
+        var chartNG = new google.charts.Line(document.getElementById('NG_chart'));
+        chartCO.draw(dataCO, optionsCO);
+        chartNG.draw(dataNG, optionsNG);
     }
     </script>
     {% endif %}
