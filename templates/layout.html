@@ -11,203 +11,163 @@
     {% else %}
         <title>Ship Operation Simulation</title>
     {% endif %}
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/metisMenu.min.css" rel="stylesheet">
-    <link href="/static/css/timeline.css" rel="stylesheet">
-    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
-    <link href="/static/css/morris.css" rel="stylesheet">
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div id="wrapper">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Ship Operation</a>
-            </div>
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>上野隆治</strong>
-                                    <span class="pull-right text-muted"><em>rueno@s.h.k.u-tokyo.ac.jp</em></span>
-                                </div>
-                                <div>Master's 2nd, GSFS, UTokyo</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>満行泰河></strong>
-                                    <span class="pull-right text-muted"><em>mitsuyukitest@gmailcom</em></span>
-                                </div>
-                                <div>Assistant Prof., Engineering, UTokyo</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>和中真之介</strong>
-                                    <span class="pull-right text-muted"><em>swanaka@s.h.k.u-tokyo.ac.jp</em></span>
-                                </div>
-                                <div>Doctoral, GSFS, UTokyo</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/metisMenu.min.css">
+    <link rel="stylesheet" href="/static/css/timeline.css">
+    <link rel="stylesheet" href="/static/css/sb-admin-2.css">
+    <link rel="stylesheet" href="/static/css/morris.css">
+    
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
+</head>
+<body class="hold-trasision skin-blue sidebar-mini">
+    <div id="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <span class="logo-mini">SOS</span>
+                <span class="logo-lg">Ship Operation Simulator</span>
+            </a>
+
+            <!-- Header -->
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle nav</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown massage-menu">
                         </li>
-                        <li><a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
-                        <li><a href="/market"><i class="fa fa-bar-chart-o fa-fw"></i> Marcket Model</a></li>
-                        <li><a href="/"><i class="fa fa-table fa-fw"></i> Route</a></li>
-                        <li><a href="/"><i class="fa fa-edit fa-fw"></i> Ship Performance Model</a></li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Operation Profile<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="panels-wells.html">Panels and Wells</a></li>
-                                <li><a href="buttons.html">Buttons</a></li>
-                                <li><a href="notifications.html">Notifications</a></li>
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="icons.html"> Icons</a></li>
-                                <li><a href="grid.html">Grid</a></li>
-                            </ul>
+                        <li class="dropdown massage-menu">
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="#">Second Level Item</a></li>
-                                <li><a href="#">Second Level Item</a></li>
-                                <li><a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li><a href="#">Third Level Item</a></li>
-                                        <li><a href="#">Third Level Item</a></li>
-                                        <li><a href="#">Third Level Item</a></li>
-                                        <li><a href="#">Third Level Item</a></li>
-                                    </ul>
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="#" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Ryuji Ueno</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header">
+                                    <img src="#" class="img-circle" alt="User Image">
+                                    <p>Ryuji Ueno<small>2nd Master's student</small></p>
                                 </li>
-                            </ul>
+                                <li class=user-footer">
+                                    <div class="pull-left">
+                                        <a href="http://www.nakl.t.u-tokyo.ac.jp/is_en/wiki.cgi?page=Ryuji+Ueno" class="btn btn-default btn-flat">My Page</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="http://apps.is.k.u-tokyo.ac.jp:8080/ShipDesignPlatform/" class="btn btn-default btn-flat">UT3</a>
+                                    </div>
+                                </li>
+
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="blank.html">Blank Page</a></li>
-                                <li><a href="login.html">Login Page</a></li>
-                            </ul>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="#" class="img-circle" alt="Run">
+                    </div>
+                    <div class="pull-left info">
+                        <p>Simulation Run</p>
+                    </div>
+                </div>
+                <!-- Simulation Run -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>Run</button>
+                        </span>
+                    </div>
+                </form>
+
+                <!-- Settings -->
+                <ul class="sidebar-menu">
+                    <li class="header">Settings</li>
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i><span>Ship Model</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active">Hull</li>
+                            <li>Propeller</li>
+                            <li>Engine</li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i><span>Degration</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active">Engine Deterioration</li>
+                            <li>Propeller Deterioration</li>
+                            <li>Hull Deterioration</li>
+                            <li>Propeller Folding</li>
+                            <li>Hull Folding</li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i><span>Meteorology</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active">Engine Deterioration</li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i><span>Operation Model</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active">Ship Type</li>
+                            <li>Load Capacity</li>
+                            <li>Route</li>
+                            <li>Speed</li>
+                            <li>Maintenance Rule</li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i><span>Marcket</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active">Crude Oil Price</li>
+                            <li>Container Load</li>
+                            <li>Container price</li>
+                        </ul>
+                    </li>
+            </section>
+        </aside>
     </div>
     <div id="page-wrapper">
     {% block content %}{% endblock %}
