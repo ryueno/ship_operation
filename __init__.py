@@ -6,7 +6,7 @@ import numpy as np
 
 # import my modules #
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/calc/market')
-import fuel_price
+#import fuel_price
 
 project_name = 'Ship Operation Simulation'
 error_message = 'invalid error, try again'
